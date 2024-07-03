@@ -51,8 +51,11 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    # @student = Student.find_by(id: params[:id])
-
-    # if 
+    @student = Student.find_by(id: params[:id])
+    if @student.destroy
+      render json: {Message: "Account has been destroyed"}
+    else
+      render json: {ERRORS: @student.errors.full_messages}
+    end
   end
 end
