@@ -22,8 +22,6 @@ default: &default
 development:
   <<: *default
   database: team_student_api_development
-  username: postgres
-  password: Fewhuezoo00
 
  
 
@@ -60,8 +58,7 @@ development:
 test:
   <<: *default
   database: team_student_api_test
-  username: postgres
-  password: Fewhuezoo00
+
 
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -87,7 +84,5 @@ test:
 production:
   <<: *default
   database: team_student_api_production
-  username: postgres
-  password: Fewhuezoo00
 
   
