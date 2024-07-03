@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
-    render template: "students/index"
+    render :index
   end
 
   def show
