@@ -14,4 +14,7 @@ json.image student.image
 json.created_at student.created_at
 json.updated_at student.updated_at
 
+#extra student information
+json.experiences student.experiences
+
 
