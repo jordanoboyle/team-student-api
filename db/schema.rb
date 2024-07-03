@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_03_173512) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_03_185200) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "capstones", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "title"
+    t.string "description"
+    t.string "url"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "uni_name"
+    t.string "degree_type"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "company_name"
+    t.string "job_title"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "first_name"
