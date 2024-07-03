@@ -10,7 +10,19 @@ class ExperiencesController < ApplicationController
   end
 
   def create
-    render json: {message: "hello there"}
+    @experience = Experience.new()
+    @experience.student_id = params[:student_id]
+    @experience.company_name = params[:company_name]
+    @experience.job_title = params[:job_title]
+    @experience.start_date = params[:start_date]
+    @experience.end_date = params[:end_date]
+    @experience.description = params[:description]
+    
+    if @experience.save
+      render template: "experiences/show"
+    else
+      render json: {ERRORS: experience.errors.full_messages}
+    end
   end
 
   def update
