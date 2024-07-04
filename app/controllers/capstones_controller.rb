@@ -13,14 +13,41 @@ class CapstonesController < ApplicationController
   end
 
   def create
-    render json: {messge: "hello there"}
+    @capstone = Capstone.new()
+    @capstone.student_id = params[:student_id]  # this param must exist when calling this route
+    @capstone.title = params[:title]
+    @capstone.description = params[:description]
+    @capstone.url = params[:url]
+    @capstone.image = params[:image]
+
+    if @capstone.save
+      render template: "capstones/show"
+    else
+      render json: {ERRORS: @capstone.errors.full_messages}
+    end
   end
 
   def update
-    render json: {messge: "hello there"}
+    @capstone = Capstone.find_by(id: params[:id])
+    @capstone.title = params[:title] || @capstone.title
+    @capstone.description = params[:description] || @capstone.description
+    @capstone.image = params[:image] || @capstone.image
+    @capstone.url = params[:url] || @capstone.url
+    
+    if @capstone.save
+      render template: "capstones/show"
+    else
+      render json: {ERRORS: @capstones.errors.full_messages}
+    end
   end
 
   def destroy
-    render json: {messge: "hello there"}
+    @capstone = Capstone.find_by(id: params[:id])
+    
+    if @capstone.destroy
+      render json: {messge: "Casptone information removed"}
+    else
+      render json: {ERRORS: @capstone.errors.full_messages} 
+    end
   end
 end
