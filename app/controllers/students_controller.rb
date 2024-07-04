@@ -15,19 +15,14 @@ class StudentsController < ApplicationController
     @student.first_name = params[:first_name] 
     @student.last_name = params[:last_name] 
     @student.email = params[:email] 
-    @student.phone_number = params[:phone_number] 
-    @student.bio = params[:bio] 
-    @student.linked_in_url = params[:linked_in_url] 
-    @student.twitter_handle = params[:twitter_handle] 
-    @student.blog_url = params[:blog_url] 
-    @student.resume_url = params[:resume_url] 
-    @student.github_url = params[:github_url] 
-    @student.image = params[:image] 
+    @student.password = params[:password] 
+    @student.password_confirmation = params[:password_confirmation] 
+    
 
     if @student.save
-      render template: "students/show"
+      render json: {message: "Student Created Successfully"}, status: :created
     else
-      render json: {ERRORS: @students.errors.full_messages}
+      render json: {ERRORS: @student.errors.full_messages}, status: :bad_request
     end
 
   end
