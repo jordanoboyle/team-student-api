@@ -7,7 +7,9 @@ class CapstonesController < ApplicationController
   end
 
   def show
-    render json: {messge: "hello there"}
+    @capstone = Capstone.find_by(id: params[:id])
+    
+    render template: "capstones/show"
   end
 
   def create
