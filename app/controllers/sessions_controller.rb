@@ -13,7 +13,20 @@ class SessionsController < ApplicationController
       )
       render json: {jwt: jwt, email: user.email, user_id: user.id}, status: :created
     else
-      render json: {messge: "currently unauthorized"}, status: :unauthorized
+      render json: {message: "currently unauthorized"}, status: :unauthorized
     end
   end
+
+
+  def login
+    if current_user
+      user = User.find_by(id: current_user)
+      render json: {login: 'success!', name: user.name, email: user.email, user_id: user.id}
+    else
+      render json: {}, status: :unauthorized
+    end
+
+  end
+
 end
+

@@ -23,5 +23,6 @@ end
 def authenticate_user
   unless current_user
     render json: {message: "You are not authorized to access"}, status: :unauthorized
+    return false
   end
 end

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post "/students"  => "students#create"
   patch "/students/:id" => "students#update"
   delete "students/:id" => "students#destroy"
+  get "/students/current" => "students#current_student_info"
 
   #Experiences Routes
   get "/experiences"        => "experiences#index"
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
 
   #Sessions Routes
   post "/sessions" => "sessions#create"
+  get "/login" => "sessions#login"
 
 
 end

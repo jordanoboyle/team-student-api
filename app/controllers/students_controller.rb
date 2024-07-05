@@ -55,4 +55,10 @@ class StudentsController < ApplicationController
       render json: {ERRORS: @student.errors.full_messages}
     end
   end
+
+  def current_student_info
+    @student = current_user
+    render :show
+  end
+
 end
