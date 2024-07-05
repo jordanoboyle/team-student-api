@@ -16,4 +16,14 @@ class SessionsController < ApplicationController
       render json: {messge: "currently unauthorized"}, status: :unauthorized
     end
   end
+
+  def login
+    if current_user
+      user = Student.find_by(id: current_user.id)
+      render json: {login: 'success!', name_first: user.first_name, email: user.email, user_id: user.id}
+    else
+      render json: {}, status: :unauthorized
+    end 
+  end
+
 end
