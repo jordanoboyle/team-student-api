@@ -32,6 +32,13 @@ Rails.application.routes.draw do
   #Sessions Routes
   post "/sessions" => "sessions#create"
 
+  #Skills Routes
+  get "/skills"         => "skills#index"
+  get "/skills/:id"     => "skills#show"
+  post "/skills"        => "skills#create"
+  delete "/skills/:id"  => "skills#destroy"
+
+
   #Education Routes
   get "/educations" => "educations#index"
   post "/educations" => "educations#create"
