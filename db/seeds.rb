@@ -16,6 +16,14 @@ s = Student.create(first_name: "Harley", last_name: "Quinn", email: "harley@emai
 s.save
 s = Student.create(first_name: "Dick", last_name: "Grayson", email: "dick@email.com", password: "password", password_confirmation: "password" ,phone_number: "555-555-5555",bio: "I am the boy wonder, Batman's faithful sidekick. Until I became Nightwing.", linked_in_url: "linkedin.com/grayson", twitter_handle: "Robin1", blog_url: "grayson.blog.com", resume_url: "dick.resumes.com", github_url: "dick.github.com", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hurlmZ4DvORVGS4bASAq7UYNAGOlWS_83w&s")
 s.save
+s = Student.create(first_name: "Bruce", last_name: "Wayne", email: "bruce@email.com", password: "password", password_confirmation: "password" ,phone_number: "999-999-9999",bio: "I am the night, I am vengence, I am BATMAN!", linked_in_url: "linkedin.com/bruce", twitter_handle: "Batman1", blog_url: "batman.blog.com", resume_url: "bruce.resumes.com", github_url: "bruce.github.com", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hurlmZ4DvORVGS4bASAq7UYNAGOlWS_83w&s")
+s.save
+s = Student.create(first_name: "Wilbur", last_name: "Wright", email: "wilbur@email.com", password: "password", password_confirmation: "password" ,phone_number: "888-999-0000",bio: "Hey Oliver...shut it down. They make you wait for a couple hours.", linked_in_url: "linkedin.com/wilbur", twitter_handle: "Wilbur1", blog_url: "wilbur.blog.com", resume_url: "wilbur.resumes.com", github_url: "bruce.github.com", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hurlmZ4DvORVGS4bASAq7UYNAGOlWS_83w&s")
+s.save
+s = Student.create(first_name: "Julius", last_name: "Oppenheimer", email: "julius@email.com", password: "password", password_confirmation: "password" ,phone_number: "777-555-4444",bio: "Now I have become death, destroyer of worlds", linked_in_url: "linkedin.com/julius", twitter_handle: "Oppenheimer1", blog_url: "theAtomic.blog.com", resume_url: "julius.resumes.com", github_url: "julius.github.com", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hurlmZ4DvORVGS4bASAq7UYNAGOlWS_83w&s")
+s.save
+s = Student.create(first_name: "Winston", last_name: "Churchill", email: "winston@email.com", password: "password", password_confirmation: "password" ,phone_number: "777-555-7777",bio: "We will fight them on the land, we will fight them in the air.", linked_in_url: "linkedin.com/winston", twitter_handle: "BritRoyalAdmiral1", blog_url: "TheRAFRules.blog.com", resume_url: "winston.resumes.com", github_url: "churchill.github.com", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hurlmZ4DvORVGS4bASAq7UYNAGOlWS_83w&s")
+s.save
 
 
 

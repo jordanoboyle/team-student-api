@@ -17,7 +17,7 @@ json.updated_at student.updated_at
 #extra student information
 json.experiences student.experiences
 json.capstones student.capstones
-json.capstones student.capstones
+
 
 
 
